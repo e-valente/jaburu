@@ -1,6 +1,8 @@
-# Welcome to Buffalo!
+# Welcome to Jaburu project!
 
-Thank you for choosing Buffalo for your web development needs.
+Thank you for choosing Jaburu.
+
+<img src="https://storage.googleapis.com/wp-stateless-dtg/2015/05/Jaburu.jpg"  width="50%" />
 
 ## Database Setup
 

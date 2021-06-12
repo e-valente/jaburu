@@ -1,0 +1,40 @@
+<% contentFor("pageScript") { %>
+<script type="text/javascript">
+    $('#purgeButton').click(function(){
+        swal({
+            title: "Are you sure?",
+            text: "You will not be able to undo this purge action!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonText: "Yes, purge them!",
+            cancelButtonText: "No, cancel please!",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        }, function(isConfirm) {
+            if (isConfirm) {
+                swal("Purged!", "The images has been purged!", "success");
+            } else {
+                swal("Cancelled", "The images will not be purged :)", "error");
+            }
+        });
+    });
+</script>
+<% } %>
+
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="tile-body">
+            <form>
+                <div class="form-group">
+                    <label class="control-label">Image URLs (one per line)</label>
+                    <textarea class="form-control" rows="10" placeholder="Example: https://xxxx/image/0501470b-d1f0-4a00-8876-7a233de1bb58/202102241047_GmpI_c@2x.jpg"></textarea>
+                </div>
+
+            </form>
+        </div>
+        <div class="tile-footer">
+            <button class="btn btn-info" type="button" id="purgeButton"><i class="fa fa-fw fa-lg fa-check-circle" ></i>Purge Images</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" id="demoSwal2" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+        </div>
+    </div>
+</div>
